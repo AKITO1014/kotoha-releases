@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー｜Kotoha</title>
+<link rel="icon" href="icon.png">
+<style>
+:root{--bg:#f6f3ec;--card:#fffdf8;--tx:#1f2a24;--mu:#5a6660;--ln:#ddd6c8;--ac:#2f8a5b}
+@media (prefers-color-scheme:dark){:root{--bg:#121916;--card:#19221d;--tx:#ece7dd;--mu:#a3ada7;--ln:#2c3832;--ac:#6cc193}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.85 "Yu Gothic UI","Yu Gothic","Hiragino Sans","Meiryo",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
+.top{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit;margin-bottom:20px}
+.top img{width:40px;height:40px}
+h1{font-size:28px;margin:0 0 4px;line-height:1.4}
+.date{color:var(--mu);margin:0 0 24px}
+h2{font-size:19px;margin:36px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--ln)}
+ul,ol{padding-left:1.4em}
+li{margin:4px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid var(--ln);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--card);white-space:nowrap}
+.wrap{overflow-x:auto}
+.note{border-left:3px solid var(--ac);padding:8px 14px;background:var(--card);border-radius:0 8px 8px 0;margin:12px 0}
+code{font-family:inherit;background:var(--card);border:1px solid var(--ln);border-radius:4px;padding:1px 6px;font-size:14px;word-break:break-all}
+a{color:var(--ac)}
+footer{margin-top:48px;color:var(--mu);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<a class="top" href="./"><img src="icon.png" alt=""><b>Kotoha</b></a>
+<h1>プライバシーポリシー</h1>
+<p class="date">2026年11月23日 制定</p>
+
+<p>このページは、Windows用のメールアプリ「Kotoha（言の葉）」（以下「Kotoha」）が、利用する人のメールや情報をどのように扱うかを説明するものです。</p>
+
+<div class="note">Kotohaは、利用する人のPCの中だけで動くアプリです。Kotohaの製作者は、メールや個人の情報を集めるサーバーを用意していません。製作者が利用する人のメールや情報を受け取ることはありません。</div>
+
+<h2>1. Kotohaが扱う情報</h2>
+<div class="wrap">
+<table>
+<tr><th>情報</th><th>使う目的</th></tr>
+<tr><td>メール（本文・件名・差出人・宛先・日時・添付ファイル）</td><td>メールを表示する、送る、検索する、整理する（既読・削除・フォルダの移動など）ため</td></tr>
+<tr><td>メールアカウントのアドレス</td><td>どのアカウントのメールかを見分け、送信者として表示するため</td></tr>
+<tr><td>ログイン情報（Google・Microsoftから受け取る鍵、Yahoo! JAPAN IDのパスワード）</td><td>メールのサーバーにつなぐため</td></tr>
+<tr><td>Claude APIキー</td><td>AIの機能を使うため</td></tr>
+<tr><td>利用する人が作るデータ（アドレス帳・署名・定型文・ラベル・振り分け・学習したルール・設定）</td><td>Kotohaの機能を使うため</td></tr>
+</table>
+</div>
+
+<h2>2. Googleのアカウントの情報（Gmail）について</h2>
+<p>Gmailを使うとき、KotohaはGoogleの許可（OAuth）を受けて、次の範囲でメールにアクセスします。</p>
+<ul>
+<li>許可の範囲：<code>https://mail.google.com/</code>（メールの読み取り・送信・削除・整理）と、ログインした人のメールアドレスの確認（<code>openid</code>・<code>email</code>）</li>
+<li>使い方：メールの表示・送信・検索・整理と、利用する人が使うときのAIの機能（下の「3」）のためだけに使います。</li>
+<li>広告、利用する人と関係のない分析、ほかの目的には使いません。売ったり、貸したりもしません。</li>
+<li>人がメールを読むことはありません。</li>
+</ul>
+<p>KotohaがGoogle APIから受け取った情報の使用と、ほかのアプリへの転送は、「限定的使用（Limited Use）」の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a> に従います。</p>
+
+<h2>3. AI（Claude）に送る情報</h2>
+<p>Kotohaは、AIの機能に、Anthropic社のClaude APIを使います。利用する人が自分のClaude APIキーを登録したときだけ、次の機能で、その機能に必要なメールの内容をClaude APIに送ります。</p>
+<ul>
+<li>返信・新規メールの下書きを作るとき（開いているメールと、同じやり取りの前のメール、利用する人が入力した指示）</li>
+<li>新着メールに自動でラベルを付ける・仕分ける機能がオンのとき（新しく届いたメール）。設定でオフにできます。</li>
+<li>直した下書きから書き方を学ぶとき（Claudeが作った下書きと、実際に送った文）</li>
+</ul>
+<p>送った内容は、Claude APIを通してAnthropic社が処理します。扱いはAnthropic社の規約とプライバシーポリシーによります。Kotohaの製作者が、送った内容を受け取ることはありません。</p>
+
+<h2>4. 保存する場所</h2>
+<ul>
+<li>メールの写し、利用する人が作るデータ、設定は、利用する人のPCの中（<code>%APPDATA%\Kotoha</code>）に保存します。メールの本体は、もとのメールのサーバー（Google・Yahoo!など）に残ります。</li>
+<li>ログイン情報・パスワード・Claude APIキーは、Windowsの資格情報マネージャーに保存します。</li>
+<li>バックアップは、利用する人のPCの中の、利用する人が選んだフォルダに保存します。パスワードを付けて暗号化できます。</li>
+<li>Kotohaが、利用する人の情報を製作者のサーバーやクラウドに保存することはありません。</li>
+</ul>
+
+<h2>5. 外部とのやり取り</h2>
+<p>Kotohaがインターネットでやり取りする相手は、次のものだけです。</p>
+<ul>
+<li>メールのサーバー（Google・Yahoo! JAPAN・Microsoft）：メールの受信・送信・整理のため</li>
+<li>ログインの受付（Google・Microsoft）：ログインのため</li>
+<li>Anthropic社のClaude API：AIの機能を使うとき（上の「3」）</li>
+<li>GitHub：Kotohaの新しい版があるかを確かめ、受け取るため。このとき、メールや個人の情報は送りません。</li>
+</ul>
+<p>本文のリンクは、Kotohaの中では開かず、利用する人のいつものブラウザで開きます。知らない送信者のメールの外部画像は、利用する人が表示を選ぶまで読み込みません。</p>
+
+<h2 id="delete">6. 情報を消すには</h2>
+<ul>
+<li>アカウントを消す：Kotohaの設定の「アカウント」から消すと、そのアカウントのログイン情報と、PCに保存したメールの写しを消します。</li>
+<li>Googleの許可を取り消す：<a href="https://myaccount.google.com/permissions">Googleアカウントの「サードパーティ製のアプリとサービス」</a> で「Kotoha」のアクセスを削除できます。</li>
+<li>すべて消す：Kotohaをアンインストールしたあと、<code>%APPDATA%\Kotoha</code> のフォルダと、バックアップのフォルダを削除します。Windowsの資格情報マネージャーに残る「Kotoha」の項目も削除できます。</li>
+</ul>
+
+<h2>7. このポリシーの変更</h2>
+<p>このポリシーを変えるときは、このページで知らせます。</p>
+
+<h2>8. お問い合わせ</h2>
+<p>Kotohaは、製作者が知人に向けて配っているアプリです。お問い合わせは、Kotohaを紹介した製作者に直接ご連絡ください。</p>
+
+<footer><p><a href="./">Kotohaのトップへ</a></p></footer>
+</main>
+</body>
+</html>

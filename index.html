@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kotoha（言の葉）</title>
+<meta name="description" content="Claudeが返信の下書きを作る、Windows用のメールアプリ">
+<link rel="icon" href="icon.png">
+<style>
+:root{--bg:#f6f3ec;--card:#fffdf8;--tx:#1f2a24;--mu:#5a6660;--ln:#ddd6c8;--ac:#2f8a5b;--forest:#17201b;--leaf:#6cc193;--cream:#f3eee5}
+@media (prefers-color-scheme:dark){:root{--bg:#121916;--card:#19221d;--tx:#ece7dd;--mu:#a3ada7;--ln:#2c3832;--ac:#6cc193}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.85 "Yu Gothic UI","Yu Gothic","Hiragino Sans","Meiryo",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
+header{display:flex;gap:20px;align-items:center;margin-bottom:28px}
+header img{width:88px;height:88px;flex:none}
+h1{margin:0;font-size:34px;line-height:1.3}
+h1 small{font-size:18px;color:var(--mu);font-weight:400}
+.lead{margin:4px 0 0;color:var(--mu)}
+h2{font-size:21px;margin:40px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--ln)}
+h3{font-size:17px;margin:24px 0 6px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:18px 20px;margin:12px 0}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}
+.themes .card{margin:0}
+.themes b{display:block;color:var(--ac);margin-bottom:4px}
+.dl{display:inline-block;background:var(--forest);color:var(--cream);text-decoration:none;font-weight:700;padding:12px 22px;border-radius:10px;margin:8px 0}
+.dl:hover{background:#24332b}
+@media (prefers-color-scheme:dark){.dl{background:var(--leaf);color:var(--forest)}.dl:hover{background:#82cfa5}}
+ol,ul{padding-left:1.4em}
+li{margin:4px 0}
+.note{border-left:3px solid var(--ac);padding:8px 14px;background:var(--card);border-radius:0 8px 8px 0;margin:12px 0;color:var(--mu)}
+code{font-family:inherit;background:var(--card);border:1px solid var(--ln);border-radius:4px;padding:1px 6px;font-size:14px}
+a{color:var(--ac)}
+footer{margin-top:48px;color:var(--mu);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<header>
+<img src="icon.png" alt="Kotohaのアイコン（向かい合う二枚の葉）">
+<div>
+<h1>Kotoha <small>（言の葉）</small></h1>
+<p class="lead">Claudeが返信の下書きを作る、Windows用のメールアプリです。</p>
+</div>
+</header>
+
+<p>Gmailとほとんど同じ使い心地で、取引先とのやり取りをすっきり管理できます。いくつもの会社のメールアドレスを、ひとつの画面でまとめて扱えます。</p>
+
+<div class="themes">
+<div class="card"><b>AIが文章を考える</b>ビジネスメールの返信の下書きを、Claudeが作ります。送る前に、自分で直してから送れます。</div>
+<div class="card"><b>まとめて管理</b>Gmail・Yahoo!メールなど、複数のアカウントを切り替えて使えます。</div>
+<div class="card"><b>シンプル</b>余計な機能をなくし、迷わず使えることを大切にしています。</div>
+</div>
+
+<h2>ダウンロード</h2>
+<p>Windows 10・11 で使えます。</p>
+<a class="dl" href="https://github.com/AKITO1014/kotoha-releases/releases/latest">最新版のダウンロードページへ</a>
+<p>ページの下のほうの「Assets」にある <code>Kotoha-Setup-（番号）.exe</code> をクリックすると、ダウンロードが始まります。</p>
+
+<h2>インストールのしかた</h2>
+<ol>
+<li>ダウンロードした <code>Kotoha-Setup-（番号）.exe</code> をダブルクリックします。</li>
+<li>青い「WindowsによってPCが保護されました」が出たら、「詳細情報」を押してから「実行」を押します。Kotohaは個人で作ったアプリのため、この案内が出ます。</li>
+<li>インストールは自動で進み、終わるとKotohaが起動します。デスクトップとスタートメニューに「Kotoha」ができます。</li>
+</ol>
+
+<h2>はじめに設定すること</h2>
+
+<h3>1. Claude APIキー（AIの機能を使うとき）</h3>
+<p>下書きの作成などAIの機能を使うには、自分のClaude APIキーが必要です。Anthropicの開発者向けサイト（Claude Console）で作り、初めて起動したときの画面か、設定の「Claude APIキー」に登録します。</p>
+<div class="note">Claude APIの利用料は、キーを作った人に請求されます。Claudeのアプリのプラン（無料・Proなど）とは別です。キーを登録しなくても、AIを使わない機能（メールを読む・送る・整理する）は使えます。</div>
+
+<h3>2. Gmailを追加する</h3>
+<ol>
+<li>右上の「設定」を開き、「アカウントを追加」にGmailのアドレスを入れて「アカウントを追加」を押します。</li>
+<li>初めてのときは「Kotohaの身分証ファイル」を選ぶ画面が出ます。Kotohaを紹介してくれた人から受け取った <code>client_secret_〜.json</code> を選びます。</li>
+<li>いつものブラウザでGoogleのログイン画面が開くので、ログインします。</li>
+<li>「Google はこのアプリを確認していません」と出たら、「詳細」を押し、「Kotoha（安全ではないページ）に移動」を押します。Kotohaは個人で作ったアプリで、Googleの審査を受けていないため、この画面が出ます。</li>
+<li>許可を求める画面で、メールに関する項目にチェックを入れて「続行」を押します。</li>
+<li>「ログインしました」と出たら、Kotohaに戻ります。</li>
+</ol>
+
+<h3>3. Yahoo!メールを追加する</h3>
+<ol>
+<li>Web版のYahoo!メールで「設定」→「IMAP/POP/SMTPアクセス」を開き、IMAPを「許可する」にします。</li>
+<li>Kotohaの設定の「アカウントを追加」にYahoo!メールのアドレスを入れ、Yahoo! JAPAN IDのパスワードを入れて「アカウントを追加」を押します。</li>
+</ol>
+
+<h2>新しい版への更新</h2>
+<p>Kotohaは、新しい版が出ると自動で受け取ります。準備ができると画面でお知らせし、Kotohaを終了したときに入れ替わります。設定の「Kotohaについて」から、すぐに更新することもできます。</p>
+
+<h2>あなたのメールとデータについて</h2>
+<ul>
+<li>メールの写しや設定は、あなたのPCの中だけに保存します。製作者がサーバーを用意して集めることはありません。</li>
+<li>ログイン情報・パスワード・APIキーは、Windowsの資格情報マネージャーに保存します。</li>
+<li>AIの機能を使うときは、そのために必要なメールの内容をAnthropicのClaude APIに送ります。</li>
+</ul>
+<p>くわしくは <a href="privacy.html">プライバシーポリシー</a> をご覧ください。</p>
+
+<h2>アンインストール</h2>
+<p>Windowsの「設定」→「アプリ」→「インストールされているアプリ」で「Kotoha」を選び、「アンインストール」を押します。PCに保存したメールの写しや設定は残ります。消す方法は <a href="privacy.html#delete">プライバシーポリシー</a> に書いてあります。</p>
+
+<footer>
+<p>使い方で困ったときは、Kotohaを紹介してくれた人に連絡してください。</p>
+<p><a href="privacy.html">プライバシーポリシー</a></p>
+</footer>
+</main>
+</body>
+</html>
